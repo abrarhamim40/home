@@ -54,7 +54,6 @@ struct ContentView: View {
                 Text("Image Uploaded!")
                 Text(imageUrl)
                     .foregroundColor(.blue)
-                    .underline()
                     .onTapGesture {
                         if let url = URL(string: imageUrl) {
                             UIApplication.shared.open(url)
@@ -66,7 +65,7 @@ struct ContentView: View {
                 if let imageData = pickedImageData {
                     uploadImage(imageData)
                 } else {
-                    print("No image selected")
+                    print("No image selected now")
                 }
             }) {
                 Text("Upload Image")
